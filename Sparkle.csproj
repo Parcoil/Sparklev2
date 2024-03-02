@@ -10,6 +10,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+
+
   <ItemGroup>
     <Content Include="sparkle.ico" />
   </ItemGroup>
@@ -21,8 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\smaller.png" />
     <None Remove="Assets\wpfui-icon-256.png" />
     <None Remove="Assets\wpfui-icon-1024.png" />
+    <None Remove="SplashScreen1.png" />
     <None Remove="Views\Pages\sparkle.png" />
   </ItemGroup>
 
@@ -30,6 +34,13 @@
     <Resource Include="Assets\wpfui-icon-256.png" />
     <Resource Include="Assets\wpfui-icon-1024.png" />
     <Resource Include="Views\Pages\sparkle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <SplashScreen Include="Assets\smaller.png" />
+
+
   </ItemGroup>
 
 </Project>
