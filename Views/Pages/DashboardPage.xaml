@@ -10,7 +10,7 @@
     d:DataContext="{d:DesignInstance local:DashboardPage,
                                      IsDesignTimeCreatable=False}"
     d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignWidth="890"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
     ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
@@ -23,14 +23,24 @@
         </Grid.ColumnDefinitions>
 
         <ui:Button
-            Grid.Column="0"
+            Grid.Column="1"
             Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
             Content="Click me!"
-            Icon="Fluent24" />
+            Icon="Fluent24" Margin="405,209,0,0" VerticalAlignment="Top" />
         <TextBlock
             Grid.Column="1"
-            Margin="12,0,0,0"
-            VerticalAlignment="Center"
+            Margin="389,139,-377,0"
+            VerticalAlignment="Top"
             Text="{Binding ViewModel.Counter, Mode=OneWay}" />
+        <ui:Image Grid.Column="1" HorizontalAlignment="Left" Margin="359,10,0,0" VerticalAlignment="Top" Source="/Views/Pages/sparkle.png" Height="183" Width="172" RenderTransformOrigin="1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <ui:Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ui:Image.RenderTransform>
+        </ui:Image>
     </Grid>
 </Page>

@@ -11,7 +11,7 @@ namespace Sparkle.ViewModels.Windows
     public partial class MainWindowViewModel : ObservableObject
     {
         [ObservableProperty]
-        private string _applicationTitle = "WPF UI - Sparkle";
+        private string _applicationTitle = "Sparkle";
 
         [ObservableProperty]
         private ObservableCollection<object> _menuItems = new()
