@@ -22,11 +22,29 @@ namespace Sparkle.ViewModels.Windows
                 Icon = new SymbolIcon { Symbol = SymbolRegular.Home24 },
                 TargetPageType = typeof(Views.Pages.DashboardPage)
             },
-            new NavigationViewItem()
+            //new NavigationViewItem()
+            //{
+            //    Content = "Data",
+            //    Icon = new SymbolIcon { Symbol = SymbolRegular.DataHistogram24 },
+            //    TargetPageType = typeof(Views.Pages.DataPage)
+            //},
+              new NavigationViewItem()
             {
-                Content = "Data",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.DataHistogram24 },
-                TargetPageType = typeof(Views.Pages.DataPage)
+                Content = "Debloat",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.Box24 },
+                TargetPageType = typeof(Views.Pages.TestPage)
+            },
+             new NavigationViewItem()
+            {
+                Content = "Clean",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.Broom24 },
+                TargetPageType = typeof(Views.Pages.TestPage)
+            },
+             new NavigationViewItem()
+            {
+                Content = "Apps",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.Apps24 },
+                TargetPageType = typeof(Views.Pages.TestPage)
             }
         };
 
