@@ -3,6 +3,7 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
+using DiscordRPC;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -50,6 +51,8 @@ namespace Sparkle.ViewModels.Pages
 
             // Set memory usage property
             MemoryUsage = $"Memory Usage: {memoryUsageMB:F2} MB";
+            RPC.rpctimestamp = Timestamps.Now;
+            RPC.InitializeRPC();
         }
     }
 }

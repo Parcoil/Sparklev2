@@ -58,6 +58,8 @@ namespace Sparkle
                 services.AddSingleton<SettingsPage>();
                 services.AddSingleton<SettingsViewModel>();
                 services.AddSingleton<TestPage>();
+                services.AddSingleton<DebloatPage>();
+                services.AddSingleton<CleanPage>();
 
             }).Build();
 

@@ -42,7 +42,7 @@
                 </TransformGroup>
             </ui:Image.RenderTransform>
         </ui:Image>
-        <ProgressBar x:Name="ramUsageProgressBar" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="336,284,0,0" VerticalAlignment="Top" Width="224" Background="#72FFFFFF" Value="0">
+        <ProgressBar x:Name="ramUsageProgressBar" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="336,338,0,0" VerticalAlignment="Top" Width="224" Background="#72FFFFFF" Value="0">
             <ProgressBar.Foreground>
                 <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
                     <GradientStop Color="#FF84D5FF" Offset="0"/>
@@ -54,5 +54,6 @@
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="324,300,0,0" VerticalAlignment="Top" Text="{Binding Value, ElementName=progressBar}" Foreground="Black"/>
         <ui:TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="388,215,0,0" TextWrapping="Wrap" Text="Welcome To Sparkle!" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
         <TextBlock x:Name="memoryUsageTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Text="a" Grid.Column="1" Margin="384,238,0,0"/>
+        <TextBlock x:Name="freeMemoryTextBlock" FontSize="16" Text="Free Memory:" Grid.Column="1" Margin="381,258,-3,85"/>
     </Grid>
 </Page>

@@ -32,13 +32,13 @@ namespace Sparkle.ViewModels.Windows
             {
                 Content = "Debloat",
                 Icon = new SymbolIcon { Symbol = SymbolRegular.Box24 },
-                TargetPageType = typeof(Views.Pages.TestPage)
+                TargetPageType = typeof(Views.Pages.DebloatPage)
             },
              new NavigationViewItem()
             {
                 Content = "Clean",
                 Icon = new SymbolIcon { Symbol = SymbolRegular.Broom24 },
-                TargetPageType = typeof(Views.Pages.TestPage)
+                TargetPageType = typeof(Views.Pages.CleanPage)
             },
              new NavigationViewItem()
             {
