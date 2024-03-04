@@ -16,23 +16,19 @@
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     mc:Ignorable="d">
 
-    <Grid VerticalAlignment="Top">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-
-        <!--<ui:Button
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+    
+    <!--<ui:Button
             Grid.Column="1"
             Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
             Content="Click me!"
             Icon="Fluent24" Margin="405,209,0,0" VerticalAlignment="Top" />-->
         <TextBlock
             Grid.Column="1"
-            Margin="389,139,-377,0"
+     
             VerticalAlignment="Top"
             Text="{Binding ViewModel.Counter, Mode=OneWay}" />
-        <ui:Image Grid.Column="1" HorizontalAlignment="Left" Margin="359,10,0,0" VerticalAlignment="Top" Source="/Views/Pages/sparkle.png" Height="183" Width="172" RenderTransformOrigin="1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+        <ui:Image Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Top" Source="/Views/Pages/sparkle.png" Height="183" Width="172" RenderTransformOrigin="1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
             <ui:Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -42,7 +38,7 @@
                 </TransformGroup>
             </ui:Image.RenderTransform>
         </ui:Image>
-        <ProgressBar x:Name="ramUsageProgressBar" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="336,338,0,0" VerticalAlignment="Top" Width="224" Background="#72FFFFFF" Value="0">
+        <!--<ProgressBar x:Name="ramUsageProgressBar" Grid.Column="1" HorizontalAlignment="Left" Height="32"  VerticalAlignment="Top" Width="224" Background="#72FFFFFF" Value="0">
             <ProgressBar.Foreground>
                 <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
                     <GradientStop Color="#FF84D5FF" Offset="0"/>
@@ -50,10 +46,10 @@
                     <GradientStop Color="#FFB5ACFD" Offset="0.51"/>
                 </LinearGradientBrush>
             </ProgressBar.Foreground>
-        </ProgressBar>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="324,300,0,0" VerticalAlignment="Top" Text="{Binding Value, ElementName=progressBar}" Foreground="Black"/>
-        <ui:TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="388,215,0,0" TextWrapping="Wrap" Text="Welcome To Sparkle!" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
-        <TextBlock x:Name="memoryUsageTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Text="a" Grid.Column="1" Margin="384,238,0,0"/>
-        <TextBlock x:Name="freeMemoryTextBlock" FontSize="16" Text="Free Memory:" Grid.Column="1" Margin="381,258,-3,85"/>
-    </Grid>
+        </ProgressBar>-->
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Text="{Binding Value, ElementName=progressBar}" Foreground="Black"/>
+        <ui:TextBlock Grid.Column="1" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="Welcome To Sparkle!" FontSize="16"  VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
+        <TextBlock x:Name="memoryUsageTextBlock" HorizontalAlignment="Center" VerticalAlignment="Top" Text="a" Grid.Column="1" />
+        <TextBlock x:Name="freeMemoryTextBlock" FontSize="14" Text="Free Memory:" Grid.Column="1" HorizontalAlignment="Center" />
+</StackPanel>
 </Page>

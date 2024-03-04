@@ -47,5 +47,7 @@
             FontWeight="Medium"
             Text="About Sparkle" />
         <TextBlock Margin="0,12,0,0" Text="{Binding ViewModel.AppVersion, Mode=OneWay}" />
+        <ui:TextBlock TextWrapping="Wrap" Text="©️ 2024 The Parcoil Network" Width="158" FontFamily="Segoe UI Semibold" Height="16"/>
     </StackPanel>
+    
 </Page>
