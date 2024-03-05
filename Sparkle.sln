@@ -5,28 +5,32 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sparkle", "Sparkle.csproj", "{A337C8F1-1CB2-4D2B-BBF5-119319CEE8C5}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Sparkle Setup", "Sparkle Setup\Sparkle Setup.vdproj", "{E0705BC2-1C15-4775-87DA-C55083FF0B1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|Default = Debug|Default
 		Release|Any CPU = Release|Any CPU
-		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A337C8F1-1CB2-4D2B-BBF5-119319CEE8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A337C8F1-1CB2-4D2B-BBF5-119319CEE8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A337C8F1-1CB2-4D2B-BBF5-119319CEE8C5}.Debug|Default.ActiveCfg = Debug|Any CPU
-		{A337C8F1-1CB2-4D2B-BBF5-119319CEE8C5}.Debug|Default.Build.0 = Debug|Any CPU
 		{A337C8F1-1CB2-4D2B-BBF5-119319CEE8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A337C8F1-1CB2-4D2B-BBF5-119319CEE8C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A337C8F1-1CB2-4D2B-BBF5-119319CEE8C5}.Release|Default.ActiveCfg = Release|Any CPU
-		{A337C8F1-1CB2-4D2B-BBF5-119319CEE8C5}.Release|Default.Build.0 = Release|Any CPU
+		{E0705BC2-1C15-4775-87DA-C55083FF0B1D}.Debug|Any CPU.ActiveCfg = Debug
+		{E0705BC2-1C15-4775-87DA-C55083FF0B1D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {223F389D-2B3C-4C7A-B0B0-9507B9EEED73}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

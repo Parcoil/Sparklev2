@@ -11,7 +11,7 @@ namespace Sparkle.ViewModels.Windows
     public partial class MainWindowViewModel : ObservableObject
     {
         [ObservableProperty]
-        private string _applicationTitle = "Sparkle";
+        private string _applicationTitle = "Sparkle (Beta)";
 
         [ObservableProperty]
         private ObservableCollection<object> _menuItems = new()
@@ -40,12 +40,18 @@ namespace Sparkle.ViewModels.Windows
                 Icon = new SymbolIcon { Symbol = SymbolRegular.Broom24 },
                 TargetPageType = typeof(Views.Pages.CleanPage)
             },
-             new NavigationViewItem()
+                        new NavigationViewItem()
             {
-                Content = "Apps",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.Apps24 },
-                TargetPageType = typeof(Views.Pages.TestPage)
-            }
+                Content = "Drivers",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.Sparkle24 },
+                TargetPageType = typeof(Views.Pages.DriverPage)
+            },
+            // new NavigationViewItem()
+            //{
+            //    Content = "Apps",
+            //    Icon = new SymbolIcon { Symbol = SymbolRegular.Apps24 },
+            //    TargetPageType = typeof(Views.Pages.TestPage)
+            //}
         };
 
         [ObservableProperty]

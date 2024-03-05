@@ -60,6 +60,8 @@ namespace Sparkle
                 services.AddSingleton<TestPage>();
                 services.AddSingleton<DebloatPage>();
                 services.AddSingleton<CleanPage>();
+                services.AddSingleton<DriverPage>();
+
 
             }).Build();
 

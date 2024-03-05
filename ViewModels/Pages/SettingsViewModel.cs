@@ -29,7 +29,7 @@ namespace Sparkle.ViewModels.Pages
         private void InitializeViewModel()
         {
             CurrentTheme = ApplicationThemeManager.GetAppTheme();
-            AppVersion = $"UiDesktopApp1 - {GetAssemblyVersion()}";
+            AppVersion = $"Sparkle - {GetAssemblyVersion()}";
 
             _isInitialized = true;
         }

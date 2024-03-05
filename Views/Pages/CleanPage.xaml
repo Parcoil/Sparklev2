@@ -9,9 +9,35 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CleanPage">
 
-    <Grid>
 
-        <ui:Button Content="Clean" Margin="33,227,0,0" VerticalAlignment="Top"/>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="807">
+       
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="807">
+            <ui:Card Margin="0,0,0,10">
+                <StackPanel>
+                    <ui:TextBlock TextWrapping="Wrap" Text="Clean" Width="432" HorizontalAlignment="Left" FontFamily="Segoe UI Semibold"/>
+                    <ui:TextBlock TextWrapping="Wrap" Text="Clears temporary files and removes unnecessary registry entries." Width="432" HorizontalAlignment="Left" Foreground="#E4848484"/>
 
-    </Grid>
+                    <ui:Button  Content="Clean" Height="36" Width="158" HorizontalAlignment="Right" />
+                </StackPanel>
+            </ui:Card>
+            <ui:Card>
+               
+                <StackPanel>
+                    <ui:TextBlock TextWrapping="Wrap" Text="Auto Clean (Recomended)" Width="432" HorizontalAlignment="Left" FontFamily="Segoe UI Semibold"/>
+                    <ui:TextBlock TextWrapping="Wrap" Text="Automatically executes the clean command every few minutes." Width="432" HorizontalAlignment="Left" Foreground="#E4848484"/>
+
+                    <ui:ToggleSwitch HorizontalAlignment="Right" Name="autoclean" IsChecked="True" IsEnabled="False"
+                       />
+                </StackPanel>
+            </ui:Card
+>
+          
+        </StackPanel>
+
+
+
+
+    </StackPanel>
+
 </Page>

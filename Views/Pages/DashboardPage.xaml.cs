@@ -51,18 +51,6 @@ namespace Sparkle.Views.Pages
             {
                 memoryUsageTextBlock.Text = $"Available Memory: {availableMemoryGB:F2} GB";
             });
-
-            // Get the total physical memory (in gigabytes)
-            double totalPhysicalMemoryGB = GetTotalPhysicalMemory() / 1024.0; // Convert from kilobytes to gigabytes
-
-            // Calculate the amount of RAM free (in gigabytes)
-            double freeMemoryGB = totalPhysicalMemoryGB - availableMemoryGB;
-
-            // Display free memory in gigabytes in the second text block (freeMemoryTextBlock)
-            Dispatcher.Invoke(() =>
-            {
-                freeMemoryTextBlock.Text = $"Free Memory: {freeMemoryGB:F2} GB";
-            });
         }
 
         private ulong GetTotalPhysicalMemory()
