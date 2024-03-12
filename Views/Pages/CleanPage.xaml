@@ -18,7 +18,7 @@
                     <ui:TextBlock TextWrapping="Wrap" Text="Clean" Width="432" HorizontalAlignment="Left" FontFamily="Segoe UI Semibold"/>
                     <ui:TextBlock TextWrapping="Wrap" Text="Clears temporary files and removes unnecessary registry entries." Width="432" HorizontalAlignment="Left" Foreground="#E4848484"/>
 
-                    <ui:Button  Content="Clean" Height="36" Width="158" HorizontalAlignment="Right" />
+                    <ui:Button  Content="Clean" Height="36" Width="158" HorizontalAlignment="Right"  Click="Clean_Click"/>
                 </StackPanel>
             </ui:Card>
             <ui:Card>

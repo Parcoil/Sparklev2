@@ -17,8 +17,8 @@
     mc:Ignorable="d">
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
-    
-    <!--<ui:Button
+
+        <!--<ui:Button
             Grid.Column="1"
             Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
             Content="Click me!"
@@ -43,9 +43,24 @@
                 </LinearGradientBrush>
             </ProgressBar.Foreground>
         </ProgressBar>-->
-        
+
         <ui:TextBlock Grid.Column="1" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="Welcome To Sparkle!" FontSize="20"  VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
         <TextBlock x:Name="memoryUsageTextBlock" HorizontalAlignment="Center" VerticalAlignment="Top" Text="a" Grid.Column="1" />
+        <Border CornerRadius="10" Background="#1AFFFFFF" Margin="0,10,0,0">
+            <StackPanel Margin="0,10,0,0">
+                <ui:TextBlock Text="System Info" HorizontalAlignment="Center" FontWeight="Bold" />
+          
+             
+                <ui:TextBlock x:Name="gpuTextBlock" Text="GPU NAME" HorizontalAlignment="Center"  />
+                <ui:TextBlock x:Name="cpuTextBlock" Text="CPU NAME" HorizontalAlignment="Center"  />
+                <ui:TextBlock x:Name="motherboardTextBlock" Text="MOTHERBOARD NAME" HorizontalAlignment="Center"  />
+                <ui:TextBlock x:Name="ramTextBlock" Text="RAM INSTALLED" HorizontalAlignment="Center"  />
+
+
+            </StackPanel>
+        </Border>
+        
+
         <!--<TextBlock x:Name="freeMemoryTextBlock" FontSize="14" Text="Free Memory:" Grid.Column="1" HorizontalAlignment="Center" />-->
-</StackPanel>
+    </StackPanel>
 </Page>

@@ -19,7 +19,7 @@
                     <ui:TextBlock TextWrapping="Wrap" Text="Debloat" Width="432" HorizontalAlignment="Left"/>
                     <ui:TextBlock TextWrapping="Wrap" Text="Removes unwanted bloatware and junk files from Microsoft." Width="432" HorizontalAlignment="Left" Foreground="#E4848484"/>
 
-                    <ui:Button Content="Debloat" Height="36" Width="158" HorizontalAlignment="Right"/>
+                    <ui:Button Content="Debloat" Height="36" Width="158" HorizontalAlignment="Right" Click="Debloat_Click"/>
                 </StackPanel>
             </ui:Card>
     </StackPanel>

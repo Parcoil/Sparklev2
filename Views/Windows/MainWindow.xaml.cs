@@ -26,6 +26,7 @@ namespace Sparkle.Views.Windows
             SystemThemeWatcher.Watch(this);
 
             InitializeComponent();
+
             SetPageService(pageService);
 
             navigationService.SetNavigationControl(RootNavigation);
@@ -65,5 +66,6 @@ namespace Sparkle.Views.Windows
         {
             throw new NotImplementedException();
         }
+
     }
 }

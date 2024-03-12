@@ -20,6 +20,7 @@ namespace Sparkle.Views.Pages
             DataContext = this;
 
             InitializeComponent();
+            DisplayHardwareInfo();
 
             // Initialize the timer
             timer = new System.Timers.Timer();
@@ -32,6 +33,70 @@ namespace Sparkle.Views.Pages
 
             // Call the method to update memory usage when the page is initialized
             UpdateMemoryUsage();
+        }
+        private void DisplayHardwareInfo()
+        {
+            // Get GPU Name
+            string gpuName = GetHardwareInfo("Win32_VideoController", "Name");
+
+            // Get CPU Name
+            string cpuName = GetHardwareInfo("Win32_Processor", "Name");
+
+            // Get Motherboard Name
+            string motherboardName = GetHardwareInfo("Win32_BaseBoard", "Product");
+
+            // Get Installed RAM
+            string installedRAM = GetInstalledRAM();
+
+            // Update TextBlocks with retrieved information
+            gpuTextBlock.Text = gpuName;
+            cpuTextBlock.Text = cpuName;
+            motherboardTextBlock.Text = motherboardName;
+            ramTextBlock.Text = installedRAM;
+        }
+        private string GetHardwareInfo(string wmiClass, string property)
+        {
+            string result = "Information not available";
+
+            try
+            {
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM " + wmiClass);
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    result = obj[property].ToString();
+                    break; // We only need the first result
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or errors
+                Console.WriteLine("Error retrieving hardware information: " + ex.Message);
+            }
+
+            return result;
+        }
+
+        private string GetInstalledRAM()
+        {
+            string result = "Information not available";
+
+            try
+            {
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem");
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    ulong ram = Convert.ToUInt64(obj["TotalPhysicalMemory"]);
+                    result = (ram / (1024 * 1024)).ToString() + " MB";
+                    break; // We only need the first result
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or errors
+                Console.WriteLine("Error retrieving RAM information: " + ex.Message);
+            }
+
+            return result;
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
